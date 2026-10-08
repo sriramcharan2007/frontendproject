@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sign Up | DisasterSafe</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+<div class="auth-layout">
+  <div class="auth-brand"><a class="brand" href="index.html"><span class="brand-icon">✚</span> DisasterSafe</a><div><span class="eyebrow">JOIN THE PLATFORM</span><h1>Create your<br><span>safe account.</span></h1><p>Register to access incident reporting, alerts and your personal disaster management dashboard.</p></div><a href="index.html" class="back-link">← Back to website</a></div>
+  <div class="auth-box"><div class="auth-card">
+    <div class="auth-title"><span class="mobile-logo">✚</span><h2>Create account</h2><p>It only takes a minute</p></div>
+    <div id="signupMessage" class="form-message"></div>
+    <form id="signupForm">
+      <label>Full name<input id="signupName" type="text" placeholder="Enter your full name" required></label>
+      <label>Email address<input id="signupEmail" type="email" placeholder="you@example.com" required></label>
+      <label>Password<div class="password-wrap"><input id="signupPassword" type="password" placeholder="Minimum 6 characters" minlength="6" required><button type="button" onclick="togglePassword('signupPassword',this)">Show</button></div></label>
+      <label>Account type<select id="signupRole"><option value="user">Citizen / User</option><option value="admin">Administrator</option></select></label>
+      <label class="checkbox"><input type="checkbox" required> I agree to use this educational system responsibly.</label>
+      <button class="btn btn-primary full" type="submit">Create Account</button>
+    </form>
+    <p class="switch">Already have an account? <a href="Login.html">Sign in</a></p>
+  </div></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
