@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>User Dashboard | DisasterSafe</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+<div class="dashboard">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand side-brand" href="index.html"><span class="brand-icon">✚</span> DisasterSafe</a>
+    <div class="profile"><div class="avatar" id="sideAvatar">U</div><div><b id="sideName">User</b><small>Citizen Account</small></div></div>
+    <nav class="side-nav">
+      <a class="active" href="#overview">▦ <span>Overview</span></a>
+      <a href="#report">🚨 <span>Report Incident</span></a>
+      <a href="#alerts">🔔 <span>Alerts</span></a>
+      <a href="#resources">📦 <span>Resources</span></a>
+      <a href="#safety">🛡 <span>Safety Guide</span></a>
+    </nav>
+    <button class="logout side-logout" onclick="logout()">↪ Logout</button>
+  </aside>
+  <div class="dashboard-main">
+    <header class="dash-header"><button class="mobile-menu" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button><div><span class="eyebrow">USER DASHBOARD</span><h1 id="welcomeName">Welcome back!</h1></div><div class="header-user"><div class="avatar small" id="headerAvatar">U</div><button onclick="logout()">Logout</button></div></header>
+    <main class="dash-content">
+      <div id="overview" class="stat-grid">
+        <div class="stat-card"><span class="stat-icon red">🚨</span><div><small>My Reports</small><strong id="reportCount">0</strong></div></div>
+        <div class="stat-card"><span class="stat-icon blue">🔔</span><div><small>Active Alerts</small><strong>3</strong></div></div>
+        <div class="stat-card"><span class="stat-icon green">📦</span><div><small>Available Shelters</small><strong>12</strong></div></div>
+        <div class="stat-card"><span class="stat-icon purple">✓</span><div><small>System Status</small><strong class="online">Online</strong></div></div>
+      </div>
+
+      <div class="dash-grid">
+        <section id="report" class="panel">
+          <div class="panel-head"><div><h2>Report an Incident</h2><p>Send an incident report to the system.</p></div><span class="panel-icon">🚨</span></div>
+          <form id="incidentForm" class="dashboard-form">
+            <div class="two-col"><label>Incident type<select id="incidentType" required><option value="">Select type</option><option>Flood</option><option>Earthquake</option><option>Fire</option><option>Cyclone</option><option>Landslide</option><option>Other</option></select></label><label>Location<input id="incidentLocation" placeholder="Area / location" required></label></div>
+            <label>Description<textarea id="incidentDescription" rows="4" placeholder="Describe what happened..." required></textarea></label>
+            <button class="btn btn-primary" type="submit">Submit Report</button>
+            <div id="incidentMessage" class="form-message"></div>
+          </form>
+        </section>
+
+        <section id="alerts" class="panel">
+          <div class="panel-head"><div><h2>Emergency Alerts</h2><p>Latest system notifications.</p></div><span class="panel-icon">🔔</span></div>
+          <div class="dash-alert danger"><b>General Safety Alert</b><small>Follow verified local authority instructions during emergencies.</small><span>Active</span></div>
+          <div class="dash-alert warning"><b>Preparedness Reminder</b><small>Keep essential supplies and emergency contacts accessible.</small><span>Info</span></div>
+          <div class="dash-alert safe"><b>System Operational</b><small>DisasterSafe dashboard services are available.</small><span>OK</span></div>
+        </section>
+      </div>
+
+      <section id="resources" class="panel full-panel"><div class="panel-head"><div><h2>Emergency Resources</h2><p>Example resources managed by the system.</p></div></div>
+        <div class="resource-grid"><div><span>🏥</span><b>Medical Support</b><small>Emergency medical assistance</small></div><div><span>🏠</span><b>Safe Shelters</b><small>12 listed locations</small></div><div><span>🚒</span><b>Response Teams</b><small>Rescue coordination</small></div><div><span>💧</span><b>Relief Supplies</b><small>Water and essential items</small></div></div>
+      </section>
+
+      <section id="safety" class="panel full-panel"><div class="panel-head"><div><h2>Safety Guide</h2><p>General preparedness information.</p></div></div><div class="guide-grid"><div><b>Before an emergency</b><p>Prepare a kit, plan evacuation routes and save important contacts.</p></div><div><b>During an emergency</b><p>Stay calm, move to a safer location and follow official instructions.</p></div><div><b>After an emergency</b><p>Avoid unsafe areas and report hazards through appropriate authorities.</p></div></div></section>
+
+      <section class="panel full-panel"><div class="panel-head"><div><h2>My Recent Reports</h2><p>Reports submitted from this account.</p></div></div><div id="reportTable" class="report-table"></div></section>
+    </main>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
