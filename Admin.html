@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Admin Dashboard | DisasterSafe</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+<div class="dashboard">
+<aside class="sidebar" id="sidebar"><a class="brand side-brand" href="index.html"><span class="brand-icon">✚</span> DisasterSafe</a>
+<div class="profile"><div class="avatar">A</div><div><b id="adminName">Administrator</b><small>Admin Account</small></div></div>
+<nav class="side-nav"><a class="active" href="#adminOverview">▦ <span>Dashboard</span></a><a href="#incidents">🚨 <span>Incidents</span></a><a href="#users">👥 <span>Users</span></a><a href="#system">⚙ <span>System</span></a></nav>
+<button class="logout side-logout" onclick="logout()">↪ Logout</button></aside>
+<div class="dashboard-main"><header class="dash-header"><button class="mobile-menu" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button><div><span class="eyebrow">ADMINISTRATION</span><h1 id="adminWelcome">Control Center</h1></div><div class="header-user"><div class="avatar small">A</div><button onclick="logout()">Logout</button></div></header>
+<main class="dash-content">
+<div id="adminOverview" class="stat-grid"><div class="stat-card"><span class="stat-icon red">🚨</span><div><small>Total Incidents</small><strong id="adminReports">0</strong></div></div><div class="stat-card"><span class="stat-icon blue">👥</span><div><small>Registered Users</small><strong id="adminUsers">0</strong></div></div><div class="stat-card"><span class="stat-icon orange">⚠</span><div><small>Pending Reports</small><strong id="pendingReports">0</strong></div></div><div class="stat-card"><span class="stat-icon green">✓</span><div><small>System Status</small><strong class="online">Healthy</strong></div></div></div>
+<section id="incidents" class="panel full-panel"><div class="panel-head"><div><h2>Incident Management</h2><p>Review reports submitted by users.</p></div><button class="btn btn-light" onclick="renderAdminReports()">Refresh</button></div><div id="adminReportTable" class="report-table"></div></section>
+<div class="dash-grid"><section id="users" class="panel"><div class="panel-head"><div><h2>User Management</h2><p>Registered accounts on this demo system.</p></div></div><div id="userList"></div></section>
+<section id="system" class="panel"><div class="panel-head"><div><h2>System Information</h2><p>Application configuration.</p></div></div><div class="system-list"><div><span>Application</span><b>DisasterSafe</b></div><div><span>Version</span><b>1.0.0</b></div><div><span>Storage</span><b>Browser LocalStorage</b></div><div><span>Mode</span><b>Educational Demo</b></div></div></section></div>
+</main></div></div>
+<script src="script.js"></script>
+</body>
+</html>
