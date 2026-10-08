@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DisasterSafe | Disaster Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-icon">✚</span> DisasterSafe</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#alerts">Alerts</a>
+      <a href="#preparedness">Preparedness</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="Login.html">Login</a>
+      <a class="btn btn-primary" href="signup.html">Get Started</a>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">SMART • FAST • RESPONSIVE</span>
+        <h1>Disaster management made <span>simple.</span></h1>
+        <p>Monitor alerts, report incidents, manage emergency resources and keep communities prepared from one professional dashboard.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary btn-lg" href="signup.html">Create Account →</a>
+          <a class="btn btn-light btn-lg" href="#preparedness">Explore Safety Guide</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>24/7</strong><small>Monitoring</small></div>
+          <div><strong>4</strong><small>Response Areas</small></div>
+          <div><strong>100%</strong><small>Web Based</small></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="status-row"><span class="live-dot"></span> LIVE SYSTEM STATUS <span class="status-ok">OPERATIONAL</span></div>
+        <div class="alert-card danger">
+          <div class="alert-icon">⚠</div>
+          <div><strong>Emergency Alerts</strong><p>Receive important disaster notifications through your dashboard.</p></div>
+        </div>
+        <div class="mini-grid">
+          <div><span>🚨</span><b>Report</b><small>Incidents</small></div>
+          <div><span>🧭</span><b>Response</b><small>Coordination</small></div>
+          <div><span>📦</span><b>Resources</b><small>Inventory</small></div>
+          <div><span>📊</span><b>Analytics</b><small>Reports</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head"><span class="eyebrow">CORE FEATURES</span><h2>Everything in one place</h2><p>A centralized platform for citizens, volunteers and administrators.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon red">🚨</div><h3>Incident Reporting</h3><p>Submit disaster reports with location, category and description.</p></article>
+        <article class="feature"><div class="feature-icon blue">📢</div><h3>Emergency Alerts</h3><p>View important warnings and safety information from administrators.</p></article>
+        <article class="feature"><div class="feature-icon green">📦</div><h3>Resource Management</h3><p>Track shelters, medical supplies, rescue teams and essential resources.</p></article>
+        <article class="feature"><div class="feature-icon purple">📈</div><h3>Dashboard Analytics</h3><p>View incidents, response activity and system statistics at a glance.</p></article>
+      </div>
+    </section>
+
+    <section id="alerts" class="section alt">
+      <div class="section-head"><span class="eyebrow">SAFETY CENTER</span><h2>Current information</h2></div>
+      <div class="alert-list">
+        <div class="notice"><span class="notice-icon">ℹ</span><div><b>Stay informed</b><p>Always follow instructions issued by local emergency authorities.</p></div><span class="tag info">INFO</span></div>
+        <div class="notice"><span class="notice-icon">✓</span><div><b>Emergency kit</b><p>Keep water, first-aid supplies, a flashlight and essential documents ready.</p></div><span class="tag safe">SAFETY</span></div>
+        <div class="notice"><span class="notice-icon">☎</span><div><b>Emergency support</b><p>Use your local emergency services number when immediate assistance is required.</p></div><span class="tag help">HELP</span></div>
+      </div>
+    </section>
+
+    <section id="preparedness" class="section">
+      <div class="section-head"><span class="eyebrow">BE PREPARED</span><h2>Simple preparedness checklist</h2></div>
+      <div class="check-grid">
+        <div class="check-card"><span>01</span><h3>Make a plan</h3><p>Know your evacuation routes and identify a family meeting point.</p></div>
+        <div class="check-card"><span>02</span><h3>Build a kit</h3><p>Prepare basic food, water, medicine, light and communication supplies.</p></div>
+        <div class="check-card"><span>03</span><h3>Stay connected</h3><p>Keep phones charged and follow verified emergency announcements.</p></div>
+        <div class="check-card"><span>04</span><h3>Help safely</h3><p>Assist others only when it is safe and within your training.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div><span class="eyebrow">CONTACT</span><h2>Need to report an incident?</h2><p>Log in to submit a report and track its status through your dashboard.</p></div>
+      <a class="btn btn-primary btn-lg" href="Login.html">Open Dashboard →</a>
+    </section>
+  </main>
+
+  <footer><div class="brand">✚ DisasterSafe</div><p>Disaster Management System • Educational Web Project</p><span>© 2026 DisasterSafe</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
